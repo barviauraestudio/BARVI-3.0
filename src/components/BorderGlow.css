@@ -133,16 +133,22 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: auto;
+  overflow: visible;
   border-radius: inherit;
   height: 100%;
   z-index: 1;
+  touch-action: pan-y;
 }
 
 @media (max-width: 768px) {
   .border-glow-card {
     overflow: hidden !important;
     max-width: 100% !important;
+    touch-action: pan-y !important;
+  }
+  .border-glow-inner {
+    overflow: visible !important;
+    touch-action: pan-y !important;
   }
   .border-glow-card > .edge-light {
     inset: 0 !important;
