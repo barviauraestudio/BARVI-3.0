@@ -9,7 +9,7 @@ const TITLE_WORDS = [
   { text: 'excelência', style: { fontWeight: 200 }, breakAfter: true },
   { text: 'ao', style: { fontWeight: 200 }, breakAfter: false },
   { text: 'posicionamento', style: { fontWeight: 200 }, breakAfter: false },
-  { text: 'de', style: { fontWeight: 200 }, breakAfter: false },
+  { text: 'com', style: { fontWeight: 200 }, breakAfter: false },
   { text: 'autoridade.', style: { fontWeight: 400, color: '#ffffff' }, breakAfter: false },
 ]
 
