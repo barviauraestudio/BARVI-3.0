@@ -19,7 +19,7 @@ export default function MobileMenu({ open, onClose }: Props) {
         Consultoria
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#a78779" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <p className="mobile-menu-contact">Urubici · Serra Catarinense</p>
+      <p className="mobile-menu-contact">Florianópolis · Santa Catarina</p>
     </div>
   )
 }
