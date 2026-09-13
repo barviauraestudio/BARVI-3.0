@@ -1337,6 +1337,14 @@ footer::after {
 }
 
 /* Minimalismo / Filosofia Barví */
+.minimalism-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
 .minimalism-card {
   transition: filter 0.35s ease, opacity 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
 }
@@ -1350,6 +1358,14 @@ footer::after {
 }
 
 /* Investimento & Valor */
+.investment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto 60px;
+}
 .investment-card {
   transition: filter 0.35s ease, opacity 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease !important;
 }
@@ -1360,6 +1376,20 @@ footer::after {
 .investment-grid:hover .investment-card:hover {
   filter: blur(0px) !important;
   opacity: 1 !important;
+}
+
+@media (max-width: 1024px) {
+  .minimalism-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .minimalism-grid,
+  .investment-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
 }
 
 @theme inline {
