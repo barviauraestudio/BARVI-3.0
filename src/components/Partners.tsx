@@ -152,6 +152,12 @@ export default function Partners() {
           }
 
           @media (max-width: 640px) {
+            .partners-marquee-container {
+              width: 100% !important;
+              max-width: 100% !important;
+              margin-left: 0 !important;
+              margin-right: 0 !important;
+            }
             .partner-marquee-card {
               width: 220px;
               height: 100px;

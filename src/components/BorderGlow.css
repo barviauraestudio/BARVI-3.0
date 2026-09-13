@@ -138,3 +138,13 @@
   height: 100%;
   z-index: 1;
 }
+
+@media (max-width: 768px) {
+  .border-glow-card {
+    overflow: hidden !important;
+    max-width: 100% !important;
+  }
+  .border-glow-card > .edge-light {
+    inset: 0 !important;
+  }
+}
