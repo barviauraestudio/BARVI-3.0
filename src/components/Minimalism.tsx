@@ -69,16 +69,7 @@ export default function Minimalism() {
           </FadeContent>
         </Reveal>
 
-        <div
-          className="minimalism-grid"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: 24,
-            maxWidth: 1140,
-            margin: '0 auto',
-          }}
-        >
+        <div className="minimalism-grid">
           {MINIMALIST_PRINCIPLES.map((p, i) => (
             <Reveal key={p.num} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
               <FadeContent duration={700} delay={i * 100} blur className="h-full">

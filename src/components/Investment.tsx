@@ -65,16 +65,7 @@ export default function Investment() {
         </Reveal>
 
         {/* 3 Principles Grid with Sibling Blur */}
-        <div
-          className="investment-grid"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: 24,
-            maxWidth: 1140,
-            margin: '0 auto 60px',
-          }}
-        >
+        <div className="investment-grid">
           {INVESTMENT_PRINCIPLES.map((p, i) => (
             <Reveal key={p.num} delay={((i % 3) + 1) as 1 | 2 | 3}>
               <FadeContent duration={700} delay={i * 120} blur className="h-full">
