@@ -45,8 +45,8 @@ export default function Pillars() {
                   className="pillar-card h-full"
                   backgroundColor="var(--glow-card-bg, rgba(10,3,5,0.7))"
                   borderRadius={12}
-                  glowColor="36 65 65"
-                  colors={['#a78779', '#7d5d50', '#c9b5ac']}
+                  glowColor="38 35 65"
+                  colors={['#c5b39b', '#a89882', '#dbcebe']}
                   glowIntensity={0.85}
                   glowRadius={32}
                   edgeSensitivity={28}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Reveal from './Reveal'
 import CenterWrapper from './CenterWrapper'
@@ -8,39 +8,72 @@ import { X, ZoomIn } from 'lucide-react'
 
 const OFFICE_PHOTOS = [
   {
-    src: '/estetica_1.jpg',
-    title: 'Posicionamento Profissional',
-    desc: 'Retratos estratégicos que expressam a autoridade e o padrão de excelência de especialistas da saúde.',
-    aspect: 'aspect-[4/3] md:aspect-square'
+    src: '/equipe_1.png',
+    title: 'Presença & Acolhimento',
+    desc: 'Retratos estratégicos que capturam a autoridade e a atmosfera acolhedora do ambiente clínico.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_2.png',
+    title: 'Autoridade & Elegância',
+    desc: 'Composição de imagem refinada transmitindo sofisticação, segurança e empatia no atendimento.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_3.png',
+    title: 'Posicionamento Corporativo',
+    desc: 'Fotografia de liderança para especialistas, alinhando sobriedade e reputação de alto nível.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_4.jpg',
+    title: 'Rigor & Credenciais Clínicas',
+    desc: 'Imagem profissional evidenciando a formação técnica, especializações e rigor médico.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_5.png',
+    title: 'Conexão & Proximidade',
+    desc: 'Fotografia autoral que integra tecnologia, atendimento humano e alta percepção de valor.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_6.jpg',
+    title: 'Precisão em Ação',
+    desc: 'Registro dinâmico de procedimento sob luz de precisão com máxima atenção aos detalhes.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_7.jpg',
+    title: 'Atendimento Humanizado',
+    desc: 'Olhar atento e postura clínica transmitindo segurança, protocolo e cuidado com o paciente.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
+  },
+  {
+    src: '/equipe_8.jpg',
+    title: 'Postura & Identidade',
+    desc: 'Retrato de apresentação profissional destacando simpatia, elegância e autoridade natural.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
   },
   {
     src: '/estetica_2.jpg',
-    title: 'Precisão & Foco',
-    desc: 'Registros dinâmicos de procedimentos complexos com foco no rigor profissional e técnicas ópticas avançadas.',
-    aspect: 'aspect-[4/3] md:aspect-[3/4] md:row-span-2'
-  },
-  {
-    src: '/estetica_3.jpg',
     title: 'Fotografia Clínica Estética',
-    desc: 'Capturas em alta fidelidade evidenciando a minúcia, materiais e tecnologia em tratamentos odontológicos.',
-    aspect: 'aspect-[4/3] md:aspect-[3/2]'
-  },
-  {
-    src: '/estetica_4.jpg',
-    title: 'Experiência & Cuidado',
-    desc: 'A representação visual do atendimento humanizado, segurança clínica e entrega de resultados extraordinários.',
-    aspect: 'aspect-[4/3] md:aspect-[16/10]'
-  },
-  {
-    src: '/estetica_5.jpg',
-    title: 'Harmonia & Simetria',
-    desc: 'Mapeamento detalhado e planejamento facial meticuloso para os tratamentos estéticos.',
-    aspect: 'aspect-[4/3] md:aspect-[16/10]'
+    desc: 'Capturas em alta fidelidade evidenciando a minúcia, materiais e tecnologia em tratamentos de saúde.',
+    aspect: 'aspect-[9/16] md:aspect-[3/4]'
   }
 ]
 
 export default function OfficeGallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.classList.add('lightbox-open')
+    } else {
+      document.body.classList.remove('lightbox-open')
+    }
+    return () => document.body.classList.remove('lightbox-open')
+  }, [selectedImage])
 
   return (
     <section id="consultorios" className="section" style={{ padding: '100px 0' }}>
@@ -74,8 +107,8 @@ export default function OfficeGallery() {
                   className="gallery-item"
                   backgroundColor="var(--glow-card-bg, rgba(10, 3, 5, 0.45))"
                   borderRadius={16}
-                  glowColor="36 65 65"
-                  colors={['#a78779', '#7d5d50', '#c9b5ac']}
+                  glowColor="38 35 65"
+                  colors={['#c5b39b', '#a89882', '#dbcebe']}
                   glowIntensity={0.8}
                   glowRadius={32}
                   edgeSensitivity={28}
@@ -123,7 +156,7 @@ export default function OfficeGallery() {
               onClick={() => setSelectedImage(null)}
               aria-label="Fechar galeria"
             >
-              <X size={28} />
+              <X size={22} stroke="var(--goldlt)" strokeWidth={1.5} />
             </button>
             <motion.img
               initial={{ scale: 0.9, y: 20 }}
@@ -151,8 +184,8 @@ export default function OfficeGallery() {
 
           @media (min-width: 768px) {
             .gallery-grid {
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-              grid-auto-flow: dense;
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+              gap: 24px;
             }
           }
 
@@ -238,14 +271,32 @@ export default function OfficeGallery() {
             line-height: 1.5;
           }
 
+          body.lightbox-open #nav,
+          body.lightbox-open #back-to-top,
+          body.lightbox-open #audioBtn {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+            transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease !important;
+          }
+
+          body.lightbox-open #nav {
+            transform: translateY(-20px) !important;
+          }
+
+          body.lightbox-open #back-to-top,
+          body.lightbox-open #audioBtn {
+            transform: translateY(20px) !important;
+          }
+
           /* Lightbox styling */
           .lightbox-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(6, 2, 4, 0.85);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            z-index: 1000;
+            background: rgba(6, 2, 4, 0.92);
+            backdrop-filter: blur(28px);
+            -webkit-backdrop-filter: blur(28px);
+            z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -262,31 +313,37 @@ export default function OfficeGallery() {
           }
 
           .lightbox-close {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            background: rgba(20, 5, 10, 0.6);
-            border: 1px solid rgba(201, 169, 110, 0.3);
-            color: var(--white);
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            left: auto;
+            z-index: 10001;
+            background: rgba(10, 3, 5, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(201, 169, 110, 0.28);
+            color: var(--goldlt);
             cursor: pointer;
             padding: 10px;
             border-radius: 50%;
-            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
             display: flex;
             align-items: center;
             justify-content: center;
           }
 
           .lightbox-close:hover {
-            background: var(--crimson);
+            background: rgba(18, 5, 9, 0.85);
             border-color: var(--goldlt);
-            transform: scale(1.1);
+            transform: scale(1.08) rotate(90deg);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6), 0 0 12px rgba(201, 169, 110, 0.2);
           }
 
           @media (max-width: 640px) {
             .gallery-overlay {
-              opacity: 1;
-              background: linear-gradient(to top, rgba(8, 2, 5, 0.95) 0%, rgba(8, 2, 5, 0.4) 70%, transparent 100%);
+              opacity: 0;
+              background: transparent;
               padding: 16px;
             }
             .zoom-icon {
@@ -301,6 +358,8 @@ export default function OfficeGallery() {
             .lightbox-close {
               top: 20px;
               right: 20px;
+              left: auto;
+              padding: 9px;
             }
           }
         `

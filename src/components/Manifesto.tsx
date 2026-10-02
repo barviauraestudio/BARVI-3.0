@@ -31,8 +31,8 @@ export default function Manifesto() {
           <FadeContent duration={800} delay={150} blur>
             <p className="manifesto-text">
               Mergulhamos em psicologia do comportamento, estética visual,
-              narrativa cinematográfica e posicionamento premium —
-              não para montar um portfólio comum, mas para traduzir a autoridade técnica de <strong>médicos, cirurgiões-dentistas e clínicas</strong> na percepção de valor dos seus pacientes.
+              narrativa cinematográfica e posicionamento premium,
+              não para montar um portfólio comum, mas para traduzir a autoridade técnica de <strong>profissionais, especialistas e clínicas de saúde</strong> na percepção de valor dos seus pacientes.
             </p>
           </FadeContent>
         </Reveal>

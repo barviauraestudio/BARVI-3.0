@@ -31,7 +31,7 @@ export default function CTA() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Barví — Mandar Mensagem
+                  Barví · Mandar Mensagem
                   <ArrowIcon />
                 </a>
               </div>

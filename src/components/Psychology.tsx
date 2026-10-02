@@ -12,12 +12,12 @@ const STATES = [
   {
     label: 'Estado Emocional',
     title: 'Desejo',
-    desc: 'Estética projetada para ativar o sistema límbico — onde decisões são tomadas.',
+    desc: 'Estética projetada para ativar o sistema límbico, onde as decisões são tomadas.',
   },
   {
     label: 'Estado Emocional',
     title: 'Identificação',
-    desc: 'O público se enxerga na marca. Não compram o produto — compram a identidade.',
+    desc: 'O público se enxerga na marca. Não compram apenas o produto, compram a identidade.',
   },
   {
     label: 'Estado Emocional',
@@ -49,7 +49,7 @@ export default function Psychology() {
                 Sabendo disso, cada palavra que escrevemos, cada frame que direcionamos, cada detalhe estético que escolhemos é projetado para ativar estados emocionais específicos no seu público.
               </p>
               <p className="psych-body" style={{ fontStyle: 'italic', color: 'var(--goldlt)', fontSize: 17 }}>
-                "Não fazemos comunicação por intuição. Fazemos comunicação por neurociência aplicada — com a elegância de quem entende que o maior poder não é gritar mais alto, é sussurrar na frequência certa."
+                "Não fazemos comunicação por intuição. Fazemos comunicação por neurociência aplicada, com a elegância de quem entende que o maior poder não é gritar mais alto, é sussurrar na frequência certa."
               </p>
             </FadeContent>
           </Reveal>
@@ -62,8 +62,8 @@ export default function Psychology() {
                     className="psych-state h-full"
                     backgroundColor="var(--glow-card-bg, rgba(8,2,5,0.6))"
                     borderRadius={12}
-                    glowColor="36 65 65"
-                    colors={['#a78779', '#7d5d50', '#c9b5ac']}
+                    glowColor="38 35 65"
+                    colors={['#c5b39b', '#a89882', '#dbcebe']}
                     glowIntensity={0.7}
                     glowRadius={24}
                     edgeSensitivity={32}
@@ -107,8 +107,8 @@ export default function Psychology() {
                 className="h-full w-full overflow-hidden"
                 backgroundColor="var(--glow-card-bg, rgba(10,3,5,0.4))"
                 borderRadius={16}
-                glowColor="36 65 65"
-                colors={['#a78779', '#7d5d50', '#c9b5ac']}
+                glowColor="38 35 65"
+                colors={['#c5b39b', '#a89882', '#dbcebe']}
                 glowIntensity={0.75}
                 glowRadius={32}
                 edgeSensitivity={30}

@@ -12,7 +12,7 @@ const MINIMALIST_PRINCIPLES = [
   {
     num: '02',
     title: 'Estética Intencional',
-    desc: 'Cada enquadramento, tom de luz e escolha tipográfica é desenhado para atrair pacientes que valorizam a alta medicina.',
+    desc: 'Cada enquadramento, tom de luz e escolha tipográfica é desenhado para atrair pacientes que valorizam a saúde de alto padrão.',
   },
   {
     num: '03',
@@ -22,7 +22,7 @@ const MINIMALIST_PRINCIPLES = [
   {
     num: '04',
     title: 'Posicionamento Perene',
-    desc: 'Construção de marca sólida e atemporal que consolida sua autoridade médica e eleva a percepção de valor no mercado.',
+    desc: 'Construção de marca sólida e atemporal que consolida sua autoridade na saúde e eleva a percepção de valor no mercado.',
   },
 ]
 
@@ -77,8 +77,8 @@ export default function Minimalism() {
                   className="minimalism-card h-full"
                   backgroundColor="rgba(255, 255, 255, 0.65)"
                   borderRadius={18}
-                  glowColor="167 135 121"
-                  colors={['#a78779', '#7d5d50', '#c9b5ac']}
+                  glowColor="38 35 65"
+                  colors={['#c5b39b', '#a89882', '#dbcebe']}
                   glowIntensity={0.65}
                   glowRadius={28}
                   edgeSensitivity={24}

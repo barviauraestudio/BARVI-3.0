@@ -105,7 +105,7 @@ export default function Partners() {
             border-color: rgba(201, 169, 110, 0.38);
             box-shadow: 
               inset 0 1px 0 rgba(255,255,255,0.1),
-              0 15px 35px rgba(139, 0, 0, 0.15),
+              0 15px 35px rgba(201, 169, 110, 0.15),
               0 4px 15px rgba(0,0,0,0.5);
             background: rgba(18, 5, 9, 0.65);
           }

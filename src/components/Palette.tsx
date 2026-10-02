@@ -24,7 +24,7 @@ export default function Palette() {
 
         <Reveal>
           <p className="colors-intro">
-            Personalizada para cada cliente, sempre guiada pela lógica da clareza e da autoridade. Cada cor é escolhida com intenção psicológica — para ativar estados emocionais específicos no público da marca.
+            Personalizada para cada cliente, sempre guiada pela lógica da clareza e da autoridade. Cada cor é escolhida com intenção psicológica, para ativar estados emocionais específicos no público da marca.
           </p>
         </Reveal>
 

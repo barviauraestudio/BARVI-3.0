@@ -125,14 +125,16 @@ export default function AudioPlayer({ src = '/SITE-AURA-AUDIO.MP3' }: AudioPlaye
         #audioBtn {
           position: fixed;
           bottom: 32px; right: 32px;
+          height: 40px;
           z-index: 500;
           display: flex;
           align-items: center;
           gap: 10px;
           background: transparent;
           border: 1px solid rgba(201,169,110,0.13);
-          box-shadow: inset 0 1px 0 rgba(255,240,210,0.13), inset 0 -1px 0 rgba(80,0,0,0.18), inset 1px 0 0 rgba(255,240,210,0.04), inset -1px 0 0 rgba(255,240,210,0.04), 0 12px 40px rgba(0,0,0,0.5);
-          padding: 10px 18px 10px 14px;
+          border-radius: 60px;
+          box-shadow: inset 0 1px 0 rgba(255,240,210,0.13), inset 0 -1px 0 rgba(201,169,110,0.12), inset 1px 0 0 rgba(255,240,210,0.04), inset -1px 0 0 rgba(255,240,210,0.04), 0 12px 40px rgba(0,0,0,0.5);
+          padding: 0 18px 0 14px;
           cursor: pointer;
           isolation: isolate;
           overflow: hidden;
@@ -143,6 +145,7 @@ export default function AudioPlayer({ src = '/SITE-AURA-AUDIO.MP3' }: AudioPlaye
         #audioBtn::before {
           content: '';
           position: absolute; inset: 0; z-index: -2;
+          border-radius: inherit;
           background: rgba(8,2,5,0.52);
           backdrop-filter: blur(32px) saturate(2.1) brightness(1.04);
           -webkit-backdrop-filter: blur(32px) saturate(2.1) brightness(1.04);
@@ -153,6 +156,7 @@ export default function AudioPlayer({ src = '/SITE-AURA-AUDIO.MP3' }: AudioPlaye
         #audioBtn::after {
           content: '';
           position: absolute; inset: 0; z-index: -1;
+          border-radius: inherit;
           background: rgba(167,135,121,0.06);
           background-image: linear-gradient(135deg, rgba(255,240,210,0.09) 0%, rgba(167,135,121,0.07) 30%, rgba(125,93,80,0.04) 55%, transparent 75%);
           pointer-events: none;
@@ -162,7 +166,7 @@ export default function AudioPlayer({ src = '/SITE-AURA-AUDIO.MP3' }: AudioPlaye
         #audioBtn:hover::after  { background-color: rgba(167,135,121,0.14); }
         #audioBtn:hover {
           border-color: rgba(167,135,121,0.36);
-          box-shadow: inset 0 1px 0 rgba(255,240,210,0.13), inset 0 -1px 0 rgba(80,0,0,0.18), 0 28px 72px rgba(0,0,0,0.62), 0 4px 20px rgba(167,135,121,0.22);
+          box-shadow: inset 0 1px 0 rgba(255,240,210,0.13), inset 0 -1px 0 rgba(201,169,110,0.12), 0 28px 72px rgba(0,0,0,0.62), 0 4px 20px rgba(167,135,121,0.22);
           transform: translateY(-3px);
         }
         #audioBtn.paused {

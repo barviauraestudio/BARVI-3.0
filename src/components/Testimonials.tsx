@@ -84,7 +84,7 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="depoimentos" className="section" style={{ minHeight: 'auto', paddingTop: '40px', paddingBottom: '120px', overflow: 'hidden' }}>
+    <section ref={sectionRef} id="depoimentos" className="section" style={{ minHeight: 'auto', paddingTop: '40px', paddingBottom: '160px', overflow: 'hidden' }}>
       <CenterWrapper>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -107,11 +107,11 @@ export default function Testimonials() {
                     key={index}
                     onClick={() => setActiveIndex(index)}
                     style={{
-                      height: '4px',
-                      borderRadius: '2px',
+                      height: '6px',
+                      borderRadius: '3px',
                       transition: 'all 0.4s ease',
-                      width: activeIndex === index ? '40px' : '12px',
-                      background: activeIndex === index ? 'var(--gold)' : 'var(--testimonial-dot-bg, rgba(255,255,255,0.1))',
+                      width: activeIndex === index ? '44px' : '14px',
+                      background: activeIndex === index ? 'var(--gold)' : 'var(--testimonial-dot-bg, rgba(255,255,255,0.18))',
                       border: 'none',
                       cursor: 'pointer'
                     }}
@@ -185,7 +185,7 @@ export default function Testimonials() {
               right: '-10%',
               width: '300px',
               height: '300px',
-              background: 'radial-gradient(circle, rgba(139,0,0,0.15) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(201,169,110,0.15) 0%, transparent 70%)',
               zIndex: -1,
               filter: 'blur(40px)'
             }} />

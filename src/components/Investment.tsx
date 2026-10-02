@@ -55,7 +55,7 @@ export default function Investment() {
                 letterSpacing: '-0.01em',
               }}
             >
-              Autoridade médica e odontológica de alto padrão não se conquista com atalhos efêmeros.{' '}
+              Autoridade e posicionamento na saúde de alto padrão não se conquistam com atalhos efêmeros.{' '}
               <strong style={{ fontWeight: 600, color: '#a78779' }}>
                 Nossa filosofia é criar algo sólido e perpétuo
               </strong>
@@ -73,8 +73,8 @@ export default function Investment() {
                   className="investment-card h-full"
                   backgroundColor="rgba(255, 255, 255, 0.65)"
                   borderRadius={18}
-                  glowColor="167 135 121"
-                  colors={['#a78779', '#7d5d50', '#c9b5ac']}
+                  glowColor="38 35 65"
+                  colors={['#c5b39b', '#a89882', '#dbcebe']}
                   glowIntensity={0.65}
                   glowRadius={28}
                   edgeSensitivity={24}

@@ -101,7 +101,7 @@ export default function Hero() {
             margin: '0 auto 56px',
             fontWeight: 400
           }}>
-            Marketing Médico e Odontológico
+            Marketing e Posicionamento para Saúde
           </p>
         </FadeContent>
 
