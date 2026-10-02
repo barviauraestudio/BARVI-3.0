@@ -63,7 +63,7 @@ const REELS_DATA: Reel[] = [
     client: 'Dr. Bernardo Passoni',
     category: 'Plástica Periodontal',
     username: 'drbernardopassoni',
-    caption: 'Detalhamento cirúrgico de alta precisão evidenciando naturalidade e maestria no atendimento.',
+    caption: 'Qualidade técnica, moral e posicionamento audiovisual como diferencial competitivo no mercado de saúde.',
     audioTrack: 'drbernardopassoni • Som original',
     likes: '1.5M',
     comments: '2,040',
