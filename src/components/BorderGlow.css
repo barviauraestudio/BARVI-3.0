@@ -27,12 +27,9 @@
 .border-glow-card::before,
 .border-glow-card::after,
 .border-glow-card > .edge-light {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  transition: opacity 0.25s ease-out;
-  z-index: -1;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .border-glow-card:not(:hover):not(.sweep-active)::before,

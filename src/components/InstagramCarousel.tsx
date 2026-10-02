@@ -193,13 +193,13 @@ export default function InstagramCarousel() {
                     className={`insta-btn ${liked ? 'liked' : ''}`}
                     aria-label={liked ? 'Descurtir' : 'Curtir'}
                   >
-                    <Heart size={22} fill={liked ? 'var(--rose)' : 'none'} stroke={liked ? 'var(--rose)' : '#B8AFA6'} />
+                    <Heart size={22} fill={liked ? '#000000' : 'none'} stroke={liked ? '#000000' : '#000000'} />
                   </button>
                   <button className="insta-btn" aria-label="Comentar">
-                    <MessageCircle size={22} stroke="#B8AFA6" />
+                    <MessageCircle size={22} stroke="#000000" />
                   </button>
                   <button className="insta-btn" aria-label="Compartilhar">
-                    <Send size={20} stroke="#B8AFA6" />
+                    <Send size={20} stroke="#000000" />
                   </button>
                 </div>
 
@@ -219,7 +219,7 @@ export default function InstagramCarousel() {
                   className={`insta-btn bookmark ${bookmarked ? 'bookmarked' : ''}`}
                   aria-label={bookmarked ? 'Remover salvos' : 'Salvar'}
                 >
-                  <Bookmark size={22} fill={bookmarked ? 'var(--gold)' : 'none'} stroke={bookmarked ? 'var(--gold)' : '#B8AFA6'} />
+                  <Bookmark size={22} fill={bookmarked ? '#000000' : 'none'} stroke={bookmarked ? '#000000' : '#000000'} />
                 </button>
               </div>
 
@@ -251,20 +251,18 @@ export default function InstagramCarousel() {
           .instagram-card {
             width: 100%;
             max-width: 460px;
-            background: rgba(10, 3, 5, 0.65);
-            backdrop-filter: var(--glass-blur);
-            -webkit-backdrop-filter: var(--glass-blur);
-            border: 1px solid rgba(201, 169, 110, 0.15);
+            background: #ffffff !important;
+            border: 1px solid rgba(128, 99, 84, 0.18);
             border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5), var(--glass-inset);
+            box-shadow: none !important;
           }
 
           .insta-header {
             display: flex;
             align-items: center;
             padding: 14px 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
           }
 
           .insta-avatar {
@@ -305,14 +303,15 @@ export default function InstagramCarousel() {
 
           .insta-username {
             font-size: 13.5px;
-            font-weight: 500;
-            color: var(--white);
+            font-weight: 600;
+            color: #000000 !important;
             line-height: 1.2;
           }
 
           .insta-location {
             font-size: 10px;
-            color: rgba(184, 175, 166, 0.6);
+            color: #000000 !important;
+            opacity: 0.7;
             line-height: 1.2;
             margin-top: 1px;
           }
@@ -329,7 +328,7 @@ export default function InstagramCarousel() {
             width: 4px;
             height: 4px;
             border-radius: 50%;
-            background: #B8AFA6;
+            background: #000000 !important;
           }
 
           /* Slide Area */
@@ -390,10 +389,10 @@ export default function InstagramCarousel() {
             font-family: var(--FB);
             font-size: 12px;
             letter-spacing: 0.3em;
-            color: var(--gold);
+            color: #000000 !important;
             margin-bottom: 16px;
             text-transform: uppercase;
-            border: 1px solid rgba(201, 169, 110, 0.25);
+            border: 1px solid rgba(0, 0, 0, 0.25);
             padding: 3px 12px;
             border-radius: 20px;
           }
@@ -402,7 +401,7 @@ export default function InstagramCarousel() {
             font-family: var(--FD);
             font-size: 26px;
             font-style: italic;
-            color: var(--white);
+            color: #000000 !important;
             margin-bottom: 20px;
             font-weight: 300;
             line-height: 1.2;
@@ -411,14 +410,14 @@ export default function InstagramCarousel() {
           .slide-divider {
             width: 32px;
             height: 1px;
-            background: var(--golddm);
+            background: #000000 !important;
             margin-bottom: 20px;
             opacity: 0.7;
           }
 
           .slide-description {
             font-size: 14.5px;
-            color: rgba(242, 237, 230, 0.82);
+            color: #000000 !important;
             line-height: 1.75;
             max-width: 340px;
           }
@@ -443,11 +442,11 @@ export default function InstagramCarousel() {
             font-family: var(--FD);
             font-style: italic;
             font-size: 24px;
-            color: var(--gold);
-            border: 1px solid rgba(201, 169, 110, 0.3);
+            color: #000000 !important;
+            border: 1px solid rgba(0, 0, 0, 0.3);
             padding: 8px 24px;
             border-radius: 50%;
-            box-shadow: 0 0 15px rgba(201,169,110,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
           }
 
           .insta-cta-btn {
@@ -455,21 +454,19 @@ export default function InstagramCarousel() {
             font-size: 11px;
             letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: var(--black);
-            background: var(--gold);
-            border: 1px solid var(--gold);
+            color: #ffffff;
+            background: #000000;
+            border: 1px solid #000000;
             padding: 14px 28px;
             border-radius: 30px;
             text-decoration: none;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(201,169,110,0.25);
           }
 
           .insta-cta-btn:hover {
             background: transparent;
-            color: var(--gold);
+            color: #000000;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201,169,110,0.15);
           }
 
           /* Navigation and Badges */
@@ -477,14 +474,14 @@ export default function InstagramCarousel() {
             position: absolute;
             top: 14px;
             right: 14px;
-            background: rgba(20, 5, 10, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(8px);
-            color: var(--white);
+            color: #ffffff !important;
             font-size: 11px;
             padding: 4px 10px;
             border-radius: 12px;
             font-weight: 500;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
             letter-spacing: 0.05em;
           }
 
@@ -492,10 +489,10 @@ export default function InstagramCarousel() {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(20, 5, 10, 0.6);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(201,169,110,0.25);
-            color: #ffffff !important;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            color: #000000 !important;
             border-radius: 50%;
             width: 32px;
             height: 32px;
@@ -508,17 +505,17 @@ export default function InstagramCarousel() {
           }
 
           .slide-nav-btn svg {
-            stroke: #ffffff !important;
-            color: #ffffff !important;
+            stroke: #000000 !important;
+            color: #000000 !important;
           }
 
           .slide-nav-btn:hover {
-            background: rgba(201, 169, 110, 0.25);
-            border-color: var(--gold);
+            background: #ffffff;
+            border-color: #000000;
           }
 
           .slide-nav-btn:hover svg {
-            stroke: var(--goldlt) !important;
+            stroke: #000000 !important;
           }
 
           .slide-nav-btn.prev { left: 12px; }
@@ -554,7 +551,7 @@ export default function InstagramCarousel() {
           }
 
           .insta-btn.liked svg {
-            filter: drop-shadow(0 0 4px rgba(212,84,122,0.4));
+            filter: none;
           }
 
           .insta-indicators {
@@ -569,13 +566,13 @@ export default function InstagramCarousel() {
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background: rgba(184, 175, 166, 0.3);
+            background: rgba(0, 0, 0, 0.25) !important;
             cursor: pointer;
             transition: all 0.3s;
           }
 
           .indicator-dot.active {
-            background: var(--gold);
+            background: #000000 !important;
             transform: scale(1.1);
           }
 
@@ -590,26 +587,28 @@ export default function InstagramCarousel() {
           }
 
           .insta-likes {
-            color: var(--white);
+            color: #000000 !important;
           }
 
           .insta-likes strong {
-            font-weight: 500;
+            color: #000000 !important;
+            font-weight: 700;
           }
 
           .insta-caption {
-            color: rgba(242, 237, 230, 0.9);
+            color: #000000 !important;
           }
 
           .insta-caption strong {
-            color: var(--white);
-            font-weight: 500;
+            color: #000000 !important;
+            font-weight: 700;
             margin-right: 5px;
           }
 
           .insta-time {
             font-size: 10.5px;
-            color: rgba(184, 175, 166, 0.45);
+            color: #000000 !important;
+            opacity: 0.6;
             text-transform: uppercase;
             letter-spacing: 0.02em;
             margin-top: 2px;
