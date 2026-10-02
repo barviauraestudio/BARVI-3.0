@@ -54,6 +54,7 @@ function BackToTop() {
           position: fixed;
           bottom: 32px;
           left: 32px;
+          height: 40px;
           z-index: 500;
           display: flex;
           align-items: center;
@@ -62,7 +63,8 @@ function BackToTop() {
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border: 1px solid rgba(167,135,121,0.18);
-          padding: 10px 16px 10px 12px;
+          border-radius: 60px;
+          padding: 0 18px 0 14px;
           cursor: pointer;
           opacity: 0;
           pointer-events: none;
@@ -143,11 +145,11 @@ function App() {
           color1="#a78779"
           color2="#ffffff"
           color3="#7d5d50"
-          timeSpeed={0.25}
+          timeSpeed={0.65}
           colorBalance={0.0}
           warpStrength={1.0}
           warpFrequency={5.0}
-          warpSpeed={0.3}
+          warpSpeed={0.55}
           warpAmplitude={44}
           blendAngle={69}
           blendSoftness={0.2}
@@ -181,14 +183,14 @@ function App() {
       <Nav menuOpen={menuOpen} onToggle={toggleMenu} />
       
       <Hero />
-      <Manifesto />
       
       {/* Middle Sections with White Background & Light Theme */}
       <div 
         id="middle-sections"
         className="middle-sections-container theme-light"
-        style={{ backgroundColor: '#FFFFFF', color: '#111111', position: 'relative', zIndex: 10 }}
+        style={{ color: '#111111', position: 'relative', zIndex: 10 }}
       >
+        <Manifesto />
         <Minimalism />
         <Pillars />
         <OfficeGallery />
