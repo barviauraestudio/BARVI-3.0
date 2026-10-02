@@ -131,103 +131,265 @@ body.hovering #cursor-ring { width: 52px; height: 52px; border-color: rgba(167,1
 
 /* ─── TEMAS E TRANSIÇÃO GRADUAL DE FUNDO ─── */
 
-.middle-sections-container {
-  background-color: #FFFFFF !important;
-  color: #0D0608 !important;
+/* ─── SISTEMA DE 4 CORES & TRANSIÇÃO DE SEÇÕES ─── */
+:root {
+  --c-espresso: #613315;
+  --c-mocha:    #806354;
+  --c-rose:     #a5877a;
+  --c-cream:    #fbfaf7;
+}
+
+.theme-section {
   position: relative;
-  z-index: 10;
-  transition: background-color 0.8s ease, color 0.8s ease;
+  width: 100%;
+  transition: background-color 0.6s ease, color 0.6s ease;
+  overflow: hidden;
 }
 
-.middle-sections-container::before {
-  content: '';
-  position: absolute;
-  top: -120px;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
-  pointer-events: none;
-  z-index: 10;
+/* 1. ESPRESSO THEME (#613315) */
+.theme-espresso {
+  background-color: #613315 !important;
+  color: #ffffff !important;
+}
+.theme-espresso .section-title,
+.theme-espresso h1, .theme-espresso h2, .theme-espresso h3, .theme-espresso h4, .theme-espresso h5, .theme-espresso h6 { 
+  color: #ffffff !important; 
+}
+.theme-espresso .section-title em, 
+.theme-espresso .section-title strong, 
+.theme-espresso .section-title b,
+.theme-espresso em, .theme-espresso strong, .theme-espresso b { 
+  color: #ffffff !important; 
+  font-style: normal; 
+}
+.theme-espresso .section-eyebrow { color: #ffffff !important; opacity: 0.95; }
+.theme-espresso .section-rule { background-color: #ffffff !important; background: #ffffff !important; opacity: 1 !important; }
+.theme-espresso p, 
+.theme-espresso .manifesto-text, 
+.theme-espresso .pillar-desc, 
+.theme-espresso .psych-body,
+.theme-espresso .psych-state-desc,
+.theme-espresso .minimalism-desc,
+.theme-espresso span,
+.theme-espresso div { color: #ffffff !important; }
+.theme-espresso .pillar-title, 
+.theme-espresso .psych-lead, 
+.theme-espresso .psych-state-title,
+.theme-espresso .minimalism-title,
+.theme-espresso .investment-card-title,
+.theme-espresso .autoridade-title { color: #ffffff !important; }
+.theme-espresso .pillar-card, 
+.theme-espresso .psych-state, 
+.theme-espresso .minimalism-card, 
+.theme-espresso .investment-card,
+.theme-espresso .testimonial-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+.theme-espresso .pillar-num, 
+.theme-espresso .pillar-kicker,
+.theme-espresso .psych-num,
+.theme-espresso .psych-state-label,
+.theme-espresso .psych-rule-kicker,
+.theme-espresso .autoridade-num,
+.theme-espresso .autoridade-sub { color: #ffffff !important; }
+.theme-espresso .psych-rule-line { background-color: #ffffff !important; background: #ffffff !important; opacity: 0.8 !important; }
+.theme-espresso .manifesto-pill {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
 }
 
-.middle-sections-container::after {
-  content: '';
-  position: absolute;
-  bottom: -120px;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
-  z-index: 10;
+/* 2. MOCHA THEME (#806354) */
+.theme-mocha {
+  background-color: #806354 !important;
+  color: #ffffff !important;
+}
+.theme-mocha .section-title,
+.theme-mocha h1, .theme-mocha h2, .theme-mocha h3, .theme-mocha h4, .theme-mocha h5, .theme-mocha h6 { 
+  color: #ffffff !important; 
+}
+.theme-mocha .section-title em, 
+.theme-mocha .section-title strong, 
+.theme-mocha .section-title b,
+.theme-mocha em, .theme-mocha strong, .theme-mocha b { 
+  color: #ffffff !important; 
+  font-style: normal; 
+}
+.theme-mocha .section-eyebrow { color: #ffffff !important; opacity: 0.95; }
+.theme-mocha .section-rule { background-color: #ffffff !important; background: #ffffff !important; opacity: 1 !important; }
+.theme-mocha p, 
+.theme-mocha .manifesto-text, 
+.theme-mocha .pillar-desc, 
+.theme-mocha .psych-body,
+.theme-mocha .psych-state-desc,
+.theme-mocha .minimalism-desc,
+.theme-mocha span,
+.theme-mocha div { color: #ffffff !important; }
+.theme-mocha .pillar-title, 
+.theme-mocha .psych-lead, 
+.theme-mocha .psych-state-title,
+.theme-mocha .minimalism-title,
+.theme-mocha .investment-card-title,
+.theme-mocha .autoridade-title { color: #ffffff !important; }
+.theme-mocha .pillar-card, 
+.theme-mocha .psych-state, 
+.theme-mocha .minimalism-card, 
+.theme-mocha .investment-card,
+.theme-mocha .testimonial-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+.theme-mocha .pillar-num, 
+.theme-mocha .pillar-kicker,
+.theme-mocha .psych-num,
+.theme-mocha .psych-state-label,
+.theme-mocha .psych-rule-kicker,
+.theme-mocha .autoridade-num,
+.theme-mocha .autoridade-sub { color: #ffffff !important; }
+.theme-mocha .psych-rule-line { background-color: #ffffff !important; background: #ffffff !important; opacity: 0.8 !important; }
+.theme-mocha .manifesto-pill {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
 }
 
-@media (max-width: 900px) {
-  .middle-sections-container::before {
-    top: -80px;
-    height: 80px;
-  }
-  .middle-sections-container::after {
-    bottom: -80px;
-    height: 80px;
-  }
+/* 3. ROSE TAN THEME (#a5877a) */
+.theme-rose {
+  background-color: #a5877a !important;
+  color: #ffffff !important;
+}
+.theme-rose .section-title,
+.theme-rose h1, .theme-rose h2, .theme-rose h3, .theme-rose h4, .theme-rose h5, .theme-rose h6 { 
+  color: #ffffff !important; 
+}
+.theme-rose .section-title em, 
+.theme-rose .section-title strong, 
+.theme-rose .section-title b,
+.theme-rose em, .theme-rose strong, .theme-rose b { 
+  color: #ffffff !important; 
+  font-style: normal; 
+}
+.theme-rose .section-eyebrow { color: #ffffff !important; font-weight: 600; opacity: 0.95; }
+.theme-rose .section-rule { background-color: #ffffff !important; background: #ffffff !important; opacity: 1 !important; }
+.theme-rose p, 
+.theme-rose .manifesto-text, 
+.theme-rose .pillar-desc, 
+.theme-rose .psych-body,
+.theme-rose .psych-state-desc,
+.theme-rose .minimalism-desc,
+.theme-rose span,
+.theme-rose div { color: #ffffff !important; }
+.theme-rose .pillar-title, 
+.theme-rose .psych-lead, 
+.theme-rose .psych-state-title,
+.theme-rose .minimalism-title,
+.theme-rose .investment-card-title,
+.theme-rose .autoridade-title { color: #ffffff !important; }
+.theme-rose .pillar-card, 
+.theme-rose .psych-state, 
+.theme-rose .minimalism-card, 
+.theme-rose .investment-card,
+.theme-rose .testimonial-card {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+.theme-rose .pillar-num, 
+.theme-rose .pillar-kicker,
+.theme-rose .psych-num,
+.theme-rose .psych-state-label,
+.theme-rose .psych-rule-kicker,
+.theme-rose .autoridade-num,
+.theme-rose .autoridade-sub { color: #ffffff !important; }
+.theme-rose .psych-rule-line { background-color: #ffffff !important; background: #ffffff !important; opacity: 0.8 !important; }
+.theme-rose .manifesto-pill {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
 }
 
-.theme-light {
-  --deep: #FFFFFF;
-  --surface: #F9FAFB;
-  --white: #0D0608; /* Texto principal escuro */
-  --muted: #4B5563; /* Texto secundário escuro */
-  --border: #E5E7EB;
-
-/* Force dark text on middle sections */
-#middle-sections .section-title { color: #111 !important; }
-#middle-sections .section-eyebrow { color: rgba(167, 135, 121, 0.9) !important; }
-#middle-sections p { color: #333; }
-#middle-sections .pillar-title { color: #111 !important; }
-#middle-sections .pillar-desc { color: #444 !important; }
-#middle-sections .pillar-kicker { color: #111 !important; }
-#middle-sections .psych-lead { color: #111 !important; }
-#middle-sections .psych-state-title { color: #111 !important; }
-#middle-sections .psych-state-desc { color: #444 !important; }
-#middle-sections .testimonial-quote { color: #111 !important; }
-#middle-sections .testimonial-author { color: #333 !important; }
-#middle-sections .testimonial-role { color: #555 !important; }
-  
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-bg-h: rgba(255, 255, 255, 0.90);
-  --glass-tint: rgba(167, 135, 121, 0.04);
-  --glass-tint-h: rgba(167, 135, 121, 0.08);
-  --glass-border: rgba(167, 135, 121, 0.22);
-  --glass-border-h: rgba(167, 135, 121, 0.45);
-  --glass-shadow: 0 4px 6px rgba(0, 0, 0, 0.03), 0 12px 40px rgba(0, 0, 0, 0.05);
-  --glass-shadow-h: 0 8px 12px rgba(0, 0, 0, 0.05), 0 28px 72px rgba(0, 0, 0, 0.08);
-
-  --glow-card-bg: rgba(255, 255, 255, 0.85);
-  
-  --gold: #a78779;
-  --goldlt: #7d5d50;
-  --golddm: #7d5d50;
-
-  --testimonial-dot-bg: rgba(0, 0, 0, 0.1);
-  --testimonial-quote-color: #7d5d50;
-  --testimonial-role-color: rgba(0, 0, 0, 0.6);
+/* 4. CREAM PAPER THEME (#fbfaf7) */
+.theme-cream {
+  background-color: #fbfaf7 !important;
+  color: #1b1917 !important;
+}
+.theme-cream .section-title,
+.theme-cream h1, .theme-cream h2, .theme-cream h3 { 
+  color: #1b1917 !important; 
+}
+.theme-cream .section-title em, 
+.theme-cream .section-title strong, 
+.theme-cream .section-title b,
+.theme-cream em, .theme-cream strong { 
+  color: #a5877a !important; 
+  font-style: normal; 
+}
+.theme-cream .section-eyebrow { color: #806354 !important; font-weight: 500; }
+.theme-cream .section-rule { background-color: #a5877a !important; }
+.theme-cream p, 
+.theme-cream .manifesto-text, 
+.theme-cream .pillar-desc, 
+.theme-cream .psych-body,
+.theme-cream .psych-state-desc,
+.theme-cream .minimalism-desc { color: #443c35 !important; }
+.theme-cream .pillar-title, 
+.theme-cream .psych-lead, 
+.theme-cream .psych-state-title,
+.theme-cream .minimalism-title,
+.theme-cream .investment-card-title { color: #1b1917 !important; }
+.theme-cream .pillar-card, 
+.theme-cream .psych-state, 
+.theme-cream .minimalism-card, 
+.theme-cream .investment-card,
+.theme-cream .testimonial-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(128, 99, 84, 0.18) !important;
+  box-shadow: none !important;
+  color: #1b1917 !important;
+}
+.theme-cream .pillar-num, 
+.theme-cream .pillar-kicker,
+.theme-cream .psych-num { color: #806354 !important; }
+.theme-cream .manifesto-pill {
+  background: #ffffff !important;
+  border-color: rgba(128, 99, 84, 0.22) !important;
+  color: #613315 !important;
 }
 
-/* Redefinições específicas para os componentes no modo claro */
-.theme-light .section-title {
-  color: var(--white);
+/* ─── TESTIMONIAL / FEEDBACK CARD STYLING ─── */
+.testimonial-card-inner {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  background: #ffffff !important;
+  border: 1px solid rgba(128, 99, 84, 0.18) !important;
+  border-radius: 24px;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.theme-light .psych-lead {
-  color: var(--white);
+/* ─── CARDS HOVER: REMOVE GLOW, PRESERVE BLUR ─── */
+.pillar-card:hover,
+.psych-state:hover,
+.minimalism-card:hover,
+.investment-card:hover,
+.testimonial-card:hover,
+.manifesto-pill:hover {
+  box-shadow: none !important;
+  background-image: none !important;
 }
-
-.theme-light .pillar-desc,
-.theme-light .psych-state-desc,
-.theme-light .psych-body {
-  color: var(--muted);
+.pillar-card::after,
+.psych-state::after,
+.minimalism-card::after,
+.investment-card::after,
+.testimonial-card::after {
+  background-image: none !important;
 }
 
 /* ─── SCROLL PROGRESS ─── */
@@ -245,11 +407,7 @@ body.hovering #cursor-ring { width: 52px; height: 52px; border-color: rgba(167,1
 body::before {
   content: '';
   position: fixed; inset: 0; z-index: -2;
-  background:
-    radial-gradient(ellipse 85% 65% at 10% 15%, rgba(255,255,255,0.22) 0%, transparent 52%),
-    radial-gradient(ellipse 70% 75% at 88% 82%, rgba(125,93,80,0.30) 0%, transparent 52%),
-    radial-gradient(ellipse 55% 55% at 50% 48%, rgba(167,135,121,0.85) 0%, transparent 65%),
-    linear-gradient(155deg, #a78779 0%, #967668 45%, #7d5d50 100%);
+  background: #a78779;
 }
 
 
@@ -563,28 +721,31 @@ nav.scrolled::before {
   background: transparent;
 }
 #quem-somos .section-eyebrow {
-  color: rgba(167, 135, 121, 0.7);
+  color: #ffffff !important;
+  opacity: 0.95;
 }
 #quem-somos .section-title {
-  color: #111;
+  color: #ffffff !important;
 }
 #quem-somos .section-title em {
-  color: var(--crimson);
+  color: #ffffff !important;
 }
 #quem-somos .section-rule {
-  background: var(--crimson);
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
 }
 .manifesto-text {
   max-width: 680px;
   font-size: clamp(18px, 2.2vw, 22px);
   font-weight: 300;
   line-height: 1.85;
-  color: #3a3a3a;
+  color: #ffffff !important;
   text-align: center;
   margin: 0 auto;
 }
-.manifesto-text em { font-style: italic; color: var(--crimson); }
-.manifesto-text strong { font-weight: 400; color: #111; }
+.manifesto-text em { font-style: italic; color: #ffffff !important; }
+.manifesto-text strong { font-weight: 400; color: #ffffff !important; }
 
 .manifesto-tagline {
   display: flex;

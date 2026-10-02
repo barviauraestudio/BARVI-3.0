@@ -4,21 +4,19 @@ import ScrollProgress from './components/ScrollProgress'
 import Nav from './components/Nav'
 import MobileMenu from './components/MobileMenu'
 import Hero from './components/Hero'
-import Manifesto from './components/Manifesto'
-import Pillars from './components/Pillars'
-import Psychology from './components/Psychology'
-import Partners from './components/Partners'
-import Testimonials from './components/Testimonials'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
-import AudioPlayer from './components/AudioPlayer'
-import { useBlurSiblings } from './components/useBlurSiblings'
-import EmailPopup from './components/EmailPopup'
-import Minimalism from './components/Minimalism'
-import Grainient from './components/Grainient'
+import ReelsSection from './components/ReelsSection'
 import OfficeGallery from './components/OfficeGallery'
 import InstagramCarousel from './components/InstagramCarousel'
+import Manifesto from './components/Manifesto'
+import Minimalism from './components/Minimalism'
+import Pillars from './components/Pillars'
+import Psychology from './components/Psychology'
+import Testimonials from './components/Testimonials'
 import Investment from './components/Investment'
+import CTA from './components/CTA'
+import Footer from './components/Footer'
+
+import { useBlurSiblings } from './components/useBlurSiblings'
 
 function BackToTop() {
   const [visible, setVisible] = useState(false)
@@ -109,21 +107,6 @@ function App() {
   useBlurSiblings(".investment-grid", ".investment-card");
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isAuroraVisible, setIsAuroraVisible] = useState(true);
-
-  useEffect(() => {
-    function handleScroll() {
-      const scrollY = window.scrollY;
-      const winHeight = window.innerHeight;
-      const nearTop = scrollY < winHeight * 1.6;
-      setIsAuroraVisible(nearTop);
-    }
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   function toggleMenu() {
     setMenuOpen(prev => {
@@ -139,73 +122,65 @@ function App() {
 
   return (
     <>
-      {/* Grainient — fixed background WebGL gradient, all sections scroll over it */}
-      <div style={{ position: 'fixed', inset: 0, zIndex: -2, overflow: 'hidden' }}>
-        <Grainient
-          color1="#a78779"
-          color2="#ffffff"
-          color3="#7d5d50"
-          timeSpeed={0.65}
-          colorBalance={0.0}
-          warpStrength={1.0}
-          warpFrequency={5.0}
-          warpSpeed={0.55}
-          warpAmplitude={44}
-          blendAngle={69}
-          blendSoftness={0.2}
-          rotationAmount={490}
-          noiseScale={0.25}
-          grainAmount={0}
-          grainScale={1.9}
-          grainAnimated={false}
-          contrast={1.5}
-          gamma={1.0}
-          saturation={0.9}
-          centerX={0.0}
-          centerY={0.0}
-          zoom={1.05}
-        />
-      </div>
-      {/* Película suavizada para dar mais vida à aurora */}
-      <div 
-        style={{ 
-          position: 'fixed', 
-          inset: 0, 
-          zIndex: -1, 
-          background: 'rgba(167,135,121,0.25)', 
-          pointerEvents: 'none',
-          opacity: isAuroraVisible ? 1 : 0,
-          transition: 'opacity 0.8s ease'
-        }} 
-      />
       <ScrollProgress />
       <MobileMenu open={menuOpen} onClose={closeMenu} />
       <Nav menuOpen={menuOpen} onToggle={toggleMenu} />
       
-      <Hero />
-      
-      {/* Middle Sections with White Background & Light Theme */}
-      <div 
-        id="middle-sections"
-        className="middle-sections-container theme-light"
-        style={{ color: '#111111', position: 'relative', zIndex: 10 }}
-      >
-        <Manifesto />
-        <Minimalism />
-        <Pillars />
-        <OfficeGallery />
-        <Psychology />
-        <InstagramCarousel />
-        <Partners />
-        <Investment />
-        <Testimonials />
+      <div className="theme-section theme-espresso">
+        <Hero />
       </div>
       
-      <CTA />
-      <Footer />
-      <AudioPlayer src="/SITE-AURA-AUDIO.MP3" />
+      {/* Dynamic 4-Color Section Flow */}
+      <div id="middle-sections" style={{ position: 'relative', zIndex: 10, width: '100%' }}>
+        {/* Visual Proof & Assets First */}
+        <div className="theme-section theme-cream">
+          <ReelsSection />
+        </div>
+
+        <div className="theme-section theme-mocha">
+          <OfficeGallery />
+        </div>
+
+        <div className="theme-section theme-cream">
+          <InstagramCarousel />
+        </div>
+
+        {/* Brand Philosophy & Strategy */}
+        <div className="theme-section theme-rose">
+          <Manifesto />
+        </div>
+
+        <div className="theme-section theme-espresso">
+          <Minimalism />
+        </div>
+
+        <div className="theme-section theme-cream">
+          <Pillars />
+        </div>
+
+        <div className="theme-section theme-mocha">
+          <Psychology />
+        </div>
+
+        {/* Social Proof & Investment */}
+        <div className="theme-section theme-cream">
+          <Testimonials />
+        </div>
+
+        <div className="theme-section theme-espresso">
+          <Investment />
+        </div>
+      </div>
+      
+      <div className="theme-section theme-rose">
+        <CTA />
+      </div>
+
+      <div className="theme-section theme-rose">
+        <Footer />
+      </div>
+
       <BackToTop />
-      <EmailPopup />
     </>
   )
 }
