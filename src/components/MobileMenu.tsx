@@ -11,7 +11,7 @@ export default function MobileMenu({ open, onClose }: Props) {
       <a href="#consultorios" onClick={onClose}>Direção de Imagem</a>
       <a href="#psicologia" onClick={onClose}>Psicologia</a>
       <a href="#instagram" onClick={onClose}>Instagram</a>
-      <a href="#parceiros" onClick={onClose}>Parceiros</a>
+      <a href="#reels" onClick={onClose}>Reels Audiovisual</a>
       <a href="#investimento" onClick={onClose}>Investimento</a>
       <div className="mobile-menu-line" />
       <a href="#cta" onClick={onClose}>Contato</a>
