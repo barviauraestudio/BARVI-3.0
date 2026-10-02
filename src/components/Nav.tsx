@@ -119,7 +119,7 @@ export default function Nav({ menuOpen, onToggle }: Props) {
           <li><a href="#consultorios">Direção de Imagem</a></li>
           <li><a href="#psicologia">Psicologia</a></li>
           <li><a href="#instagram">Instagram</a></li>
-          <li><a href="#parceiros">Parceiros</a></li>
+          <li><a href="#reels">Reels</a></li>
           <li><a href="#investimento">Investimento</a></li>
           <li><a href="#cta">Contato</a></li>
           <li>
